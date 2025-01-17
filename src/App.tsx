@@ -1,28 +1,21 @@
 import { useState } from 'react';
-import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank"></a>
-        <a href="https://react.dev" target="_blank"></a>
+    <div className="flex h-screen">
+      <div className="w-1/2 bg-white">
+        <div className='flex items-center ml-[1in] mt-[1in]'>
+          <img
+            src="/logo.png"
+            alt="Logo"
+            className="w-[100px] h-[100px] mr-8"
+          />
+          <h2 className='h2'>Google Drive Clone</h2>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <div className="w-1/2 bg-black-100"></div>
+    </div>
   );
 }
 
