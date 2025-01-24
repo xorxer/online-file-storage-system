@@ -4,7 +4,9 @@ import { Visibility, VisibilityOff } from '@mui/icons-material';
 interface InputFieldProps {
     type: string;
     placeholder: string;
+    value: string;
     icon: React.ReactNode;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
     className?: string;
     inputClassName?: string;
     iconClassName?: string;
@@ -13,7 +15,9 @@ interface InputFieldProps {
 const InputField: React.FC<InputFieldProps> = ({
     type,
     placeholder,
+    value,
     icon,
+    onChange,
     className = '',
     inputClassName = '',
     iconClassName = '',
@@ -30,6 +34,8 @@ const InputField: React.FC<InputFieldProps> = ({
             <input
                 type={type === 'password' ? (showPassword ? 'text' : 'password') : type}
                 placeholder={placeholder}
+                value={value}
+                onChange={onChange}
                 className={`w-full outline-none bg-white text-grey-400 placeholder-grey-400 border-grey-400 font-manrope ${inputClassName}`}
                 autoComplete={type === 'password' ? 'new-password' : 'off'}
             />
