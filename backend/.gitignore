@@ -1,0 +1,6 @@
+# Backend-specific ignored files
+node_modules/
+.env
+logs/
+.DS_Store
+.vscode/*
