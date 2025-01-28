@@ -1,15 +1,13 @@
-import express from 'express';
+import { createServer } from './server.js';
 import dotenv from 'dotenv';
 
+// Load environment variables
 dotenv.config();
 
-const app = express();
+// Create and start the server
 const PORT = process.env.PORT || 3000;
+const server = createServer();
 
-app.get('/', (req, res) => {
-  res.send('Hello, ES Modules!');
-});
-
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+server.listen(PORT, () => {
+  console.log(`Backend server is running on http://localhost:${PORT}`);
 });
