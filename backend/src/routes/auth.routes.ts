@@ -1,9 +1,8 @@
 import express from 'express';
 import { AuthService } from '../services/auth.service';
 import { authController } from '../controllers/auth.controller';
-import { account } from '../config/appwrite';
 
-const authService = new AuthService(account);
+const authService = new AuthService();
 const controller = authController(authService);
 
 export const authRoutes = () => {

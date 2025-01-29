@@ -1,12 +1,12 @@
-import { Client, Account } from 'node-appwrite';
+import { Client, Account, Databases, Storage } from 'node-appwrite';
+import 'dotenv/config'
 
 // Initialize Appwrite client
-const appwriteClient = new Client()
+export const client = new Client()
   .setEndpoint(process.env.APPWRITE_ENDPOINT!)
   .setProject(process.env.APPWRITE_PROJECT_ID!)
   .setKey(process.env.APPWRITE_API_KEY!);
 
-// Initialize Appwrite Account service
-const account = new Account(appwriteClient);
-
-export { account };
+export const account = new Account(client);
+export const databases = new Databases(client);
+export const storage = new Storage(client);

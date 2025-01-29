@@ -1,18 +1,19 @@
-import { Account } from 'node-appwrite';
+import { Account, ID } from 'node-appwrite';
+import { account } from '../config/appwrite';
 
 export class AuthService {
     private account: Account;
 
-    constructor(account: Account) {
+    constructor() {
         this.account = account;
     }
 
     async signup(email: string, password: string, name: string) {
         try {
-            const user = await this.account.create('unique()', email, password, name);
+            const user = await this.account.create(ID.unique(), email, password, name);
             return user;
         } catch (error) {
-            throw new Error('Failed to create user');
+            return (error as Error).message;
         }
     }
 
