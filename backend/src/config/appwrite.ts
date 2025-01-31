@@ -1,5 +1,5 @@
 import { Client, Account, Databases, Storage } from 'node-appwrite';
-import 'dotenv/config'
+import 'dotenv/config';
 
 // Initialize Appwrite client
 export const client = new Client()
