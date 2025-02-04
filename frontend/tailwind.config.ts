@@ -1,13 +1,13 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 export default {
-  content: ["./src/**/*.{html,ts,tsx,js,jsx}"],
+  content: ['./src/**/*.{html,ts,tsx,js,jsx}'],
   theme: {
     extend: {
       colors: {
         black: {
           '100': '#000000',
           '200': '#1D1D1D',
-          '300': '#282828'
+          '300': '#282828',
         },
         white: '#FFFFFF',
         grey: {
@@ -15,16 +15,14 @@ export default {
           '200': '#4F4F4F',
           '300': '#828282',
           '400': '#BDBDBD',
-          '500': '#E0E0E0'
+          '500': '#E0E0E0',
         },
-        blue: '#2F80ED'
+        blue: '#2F80ED',
       },
       fontFamily: {
-        'manrope': ['Manrope'],
-      }
-    }
+        manrope: ['Manrope'],
+      },
+    },
   },
-  plugins: [
-
-  ],
-} satisfies Config
+  plugins: [],
+} satisfies Config;

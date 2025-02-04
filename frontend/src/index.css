@@ -3,27 +3,27 @@
 @tailwind utilities;
 
 @layer utilities {
-    .flex-center {
-        @apply flex items-center justify-center;
-    }
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
 
-    .h1 {
-        @apply text-[56px] md:text-[61.6px] font-manrope font-bold
-    }
+  .h1 {
+    @apply font-manrope text-[56px] font-bold md:text-[61.6px];
+  }
 
-    .h2 {
-        @apply text-[48px] md:text-[52.8px] font-manrope font-extrabold
-    }
+  .h2 {
+    @apply font-manrope text-[48px] font-extrabold md:text-[52.8px];
+  }
 
-    .h4 {
-        @apply text-[32px] md:text-[35.2px] font-manrope font-bold
-    }
+  .h4 {
+    @apply font-manrope text-[32px] font-bold md:text-[35.2px];
+  }
 
-    .small-text {
-        @apply text-[14px] md:text-[16px] font-manrope font-bold
-    }
+  .small-text {
+    @apply font-manrope text-[14px] font-bold md:text-[16px];
+  }
 
-    .bold-btn {
-        @apply text-[24px] md:text-[26.4.px] font-manrope font-bold
-    }
+  .bold-btn {
+    @apply font-manrope text-[24px] font-bold md:text-[26.4.px];
+  }
 }
