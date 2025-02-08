@@ -12,11 +12,11 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState<string>('');
   const [errors, setErrors] = useState<string[]>([]);
 
+  const { loading } = useAppSelector((state) => state.auth);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const { loading, error: authError } = useAppSelector((state) => state.auth);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // Clear previous errors
@@ -41,6 +41,7 @@ const Login: React.FC = () => {
       await dispatch(login({ email, password })).unwrap();
       alert('Login successful!');
       setErrors([]); // Clear any previous errors
+      // navigate('/files');
     } catch (error) {
       console.log(error);
       setErrors(['An error occurred. Please try again.']);
@@ -56,7 +57,7 @@ const Login: React.FC = () => {
       <AuthLogo />
       <div className="w-1/2 bg-black-100 p-8">
         <h2 className="h2 mb-8 text-white">Log in</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleLogin}>
           <>
             <label className="small-text mb-2 block text-grey-300">Email</label>
             <div className="mb-4 rounded-md border-2 border-grey-400 bg-white">
@@ -93,6 +94,7 @@ const Login: React.FC = () => {
           <button
             type="submit"
             className="bold-btn mb-4 w-full rounded-md bg-blue py-2 text-white"
+            disabled={loading}
           >
             Login
           </button>

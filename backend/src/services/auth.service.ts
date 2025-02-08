@@ -27,7 +27,8 @@ export class AuthService {
                     storageLimit: 1073741824,
                 }
             )
-
+            await this.account.createEmailPasswordSession(email, password);
+            
             return user;
         } catch (error) {
             return (error as Error).message;

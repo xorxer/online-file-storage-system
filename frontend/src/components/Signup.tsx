@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import InputField from './InputField';
 import { Person, Lock, Email } from '@mui/icons-material';
-import { useAppDispatch, useAppSelector } from '../store/hooks';
+import { useAppDispatch } from '../store/hooks';
 import { signup } from '../services/authService';
 import { clearError } from '../slices/authSlice';
 import AuthLogo from './AuthLogo';
@@ -16,7 +16,6 @@ const Signup: React.FC = () => {
 
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const { loading, error: authError } = useAppSelector((state) => state.auth);
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,14 +25,17 @@ const Signup: React.FC = () => {
 
     // Validate input lengths
     const newErrors: string[] = [];
+    if (name.trim().length === 0) {
+      newErrors.push('Name is required.');
+    }
+    if (name.length < 2 || name.length > 50) {
+      newErrors.push('Name must be between 2 and 50 characters long.');
+    }
     if (email.length < 5 || email.length > 254) {
       newErrors.push('Email must be between 5 and 254 characters long.');
     }
     if (password.length < 8 || password.length > 100) {
       newErrors.push('Password must be between 8 and 100 characters long.');
-    }
-    if (name.length < 2 || name.length > 50) {
-      newErrors.push('Name must be between 2 and 50 characters long.');
     }
     if (password !== confirmPassword) {
       newErrors.push('Passwords do not match.');
@@ -49,6 +51,7 @@ const Signup: React.FC = () => {
       await dispatch(signup({ email, password, name })).unwrap();
       alert('Registration successful!');
       setErrors([]); // Clear any previous errors
+      navigate('/files');
     } catch (error) {
       console.log(error);
       setErrors(['An error occurred. Please try again.']);
