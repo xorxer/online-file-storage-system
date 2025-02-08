@@ -1,0 +1,36 @@
+@import url('../styles/index.css');
+.auth-container {
+  @apply flex h-screen;
+}
+
+.auth-panel {
+  @apply w-1/2 bg-black-100 p-8;
+}
+
+.auth-logo-panel {
+  @apply w-1/2 bg-white;
+}
+
+.auth-header {
+  @apply h2 mb-8 text-white;
+}
+
+.input-container {
+  @apply mb-4 rounded-md border-2 border-grey-400 bg-white;
+}
+
+.input-label {
+  @apply small-text mb-2 block text-grey-300;
+}
+
+.error-message {
+  @apply mb-4 text-red-500;
+}
+
+.auth-button {
+  @apply bold-btn mb-4 w-full rounded-md bg-blue py-2 text-white;
+}
+
+.auth-link {
+  @apply cursor-pointer font-bold text-grey-400;
+}

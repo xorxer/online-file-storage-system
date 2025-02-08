@@ -4,8 +4,8 @@ import { Lock, Email } from '@mui/icons-material';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { login } from '../../services/authService';
 import { clearError } from '../../slices/authSlice';
-import AuthLogo from '../Auth/AuthLogo';
 import { useNavigate } from 'react-router-dom';
+import AuthLogo from './AuthLogo';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState<string>('');
@@ -53,14 +53,16 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="flex h-screen">
-      <AuthLogo />
-      <div className="w-1/2 bg-black-100 p-8">
-        <h2 className="h2 mb-8 text-white">Log in</h2>
+    <div className="auth-container">
+      <div className="auth-logo-panel">
+        <AuthLogo />
+      </div>
+      <div className="auth-panel">
+        <h2 className="auth-header">Log in</h2>
         <form onSubmit={handleLogin}>
           <>
-            <label className="small-text mb-2 block text-grey-300">Email</label>
-            <div className="mb-4 rounded-md border-2 border-grey-400 bg-white">
+            <label className="input-label">Email</label>
+            <div className="input-container">
               <InputField
                 type="email"
                 placeholder="Enter your email"
@@ -71,10 +73,8 @@ const Login: React.FC = () => {
             </div>
           </>
           <>
-            <label className="small-text mb-2 block text-grey-300">
-              Password
-            </label>
-            <div className="mb-2 rounded-md border-2 border-grey-400 bg-white">
+            <label className="input-label">Password</label>
+            <div className="input-container">
               <InputField
                 type="password"
                 placeholder="Enter your password"
@@ -85,24 +85,20 @@ const Login: React.FC = () => {
             </div>
           </>
           {errors.length > 0 && (
-            <div className="mb-4 text-red-500">
+            <div className="error-message">
               {errors.map((error, index) => (
                 <p key={index}>{error}</p>
               ))}
             </div>
           )}
-          <button
-            type="submit"
-            className="bold-btn mb-4 w-full rounded-md bg-blue py-2 text-white"
-            disabled={loading}
-          >
+          <button type="submit" className="auth-button" disabled={loading}>
             Login
           </button>
           <p className="text-grey-200">
             <>
               Don't have an account?&nbsp;
               <span
-                className="cursor-pointer font-bold text-grey-400"
+                className="auth-link"
                 onClick={() => {
                   setErrors([]);
                   handleClearError();

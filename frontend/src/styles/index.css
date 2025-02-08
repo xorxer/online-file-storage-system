@@ -24,6 +24,6 @@
   }
 
   .bold-btn {
-    @apply font-manrope text-[24px] font-bold md:text-[26.4.px];
+    @apply font-manrope text-[24px] font-bold md:text-[26.4px];
   }
 }
