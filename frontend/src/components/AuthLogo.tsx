@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LogoSection: React.FC = () => {
+const AuthLogo: React.FC = () => {
   return (
     <div className="w-1/2 bg-white">
       <div className="ml-[1in] mt-[1in] flex items-center">
@@ -11,4 +11,4 @@ const LogoSection: React.FC = () => {
   );
 };
 
-export default LogoSection;
+export default AuthLogo;
