@@ -4,7 +4,7 @@ import { Person, Lock, Email } from '@mui/icons-material';
 import { useAppDispatch } from '../../store/hooks';
 import { signup } from '../../services/authService';
 import { clearError } from '../../slices/authSlice';
-import AuthLogo from '.././auth/AuthLogo';
+import Logo from '../Logo/Logo';
 import { useNavigate } from 'react-router-dom';
 
 const Signup: React.FC = () => {
@@ -65,7 +65,7 @@ const Signup: React.FC = () => {
   return (
     <div className="auth-container">
       <div className="auth-logo-panel">
-        <AuthLogo />
+        <Logo />
       </div>
       <div className="auth-panel">
         <h2 className="auth-header">Sign up</h2>

@@ -25,6 +25,8 @@ export class AuthService {
                     userId: user.$id,
                     storageUsed: 0,
                     storageLimit: 1073741824,
+                    email: email,
+                    pfp: ''
                 }
             )
             await this.account.createEmailPasswordSession(email, password);

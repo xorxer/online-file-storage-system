@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { login } from '../../services/authService';
 import { clearError } from '../../slices/authSlice';
 import { useNavigate } from 'react-router-dom';
-import AuthLogo from './AuthLogo';
+import Logo from '../Logo/Logo';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState<string>('');
@@ -55,7 +55,7 @@ const Login: React.FC = () => {
   return (
     <div className="auth-container">
       <div className="auth-logo-panel">
-        <AuthLogo />
+        <Logo />
       </div>
       <div className="auth-panel">
         <h2 className="auth-header">Log in</h2>

@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface AuthLogoProps {
+interface LogoProps {
   marginLeft?: string;
   marginTop?: string;
 }
 
-const AuthLogo: React.FC<AuthLogoProps> = ({
+const Logo: React.FC<LogoProps> = ({
   marginLeft = 'ml-[1in]',
   marginTop = 'mt-[1in]',
 }) => {
@@ -17,4 +17,4 @@ const AuthLogo: React.FC<AuthLogoProps> = ({
   );
 };
 
-export default AuthLogo;
+export default Logo;

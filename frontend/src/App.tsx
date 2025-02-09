@@ -20,13 +20,13 @@ function App() {
           <Route
             path="/dashboard"
             element={
-              <PrivateRoute>
-                <Dashboard />
-              </PrivateRoute>
+              // <PrivateRoute>
+              <Dashboard />
+              // </PrivateRoute>
             }
           />
           {/* Default route */}
-          <Route path="*" element={<Navigate to="/login" />} />
+          <Route path="*" element={<Navigate to="/dashboard" />} />
         </Routes>
       </div>
     </Router>
