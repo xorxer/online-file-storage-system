@@ -1,0 +1,10 @@
+.profile-container {
+  min-width: 0; /* Ensure flex items can shrink */
+}
+
+.user-info {
+  min-width: 0; /* Allow text to wrap if necessary */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowed content */
+  text-overflow: ellipsis; /* Show ellipsis for truncated text */
+}

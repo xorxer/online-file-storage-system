@@ -6,6 +6,7 @@ import { signup } from '../../services/authService';
 import { clearError } from '../../slices/authSlice';
 import Logo from '../Logo/Logo';
 import { useNavigate } from 'react-router-dom';
+import './auth.css';
 
 const Signup: React.FC = () => {
   const [email, setEmail] = useState<string>('');

@@ -6,6 +6,7 @@ import { login } from '../../services/authService';
 import { clearError } from '../../slices/authSlice';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../Logo/Logo';
+import './auth.css';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState<string>('');

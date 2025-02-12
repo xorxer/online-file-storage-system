@@ -17,6 +17,7 @@ export default {
           '400': '#BDBDBD',
           '500': '#E0E0E0',
           '600': '#F0F0F0',
+          '700': '#D9D9D9',
         },
         blue: '#2F80ED',
       },
