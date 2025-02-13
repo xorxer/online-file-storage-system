@@ -2,10 +2,7 @@ import React from 'react';
 import { Avatar, IconButton } from '@mui/material';
 import { ChevronRight } from '@mui/icons-material';
 import './profile.css'; // Ensure this file exists and imports Tailwind styles if needed
-import resolveConfig from 'tailwindcss/resolveConfig';
-import tailwindConfig from '../../../../tailwind.config.js';
-
-const fullConfig = resolveConfig(tailwindConfig);
+import fullConfig from '../../../util/tailwindConfig';
 
 interface ProfileProps {
   initials: string;
