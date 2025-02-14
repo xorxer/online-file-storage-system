@@ -20,6 +20,7 @@ export default {
           '700': '#D9D9D9',
         },
         blue: '#2F80ED',
+        custom_red: '#EB5757',
       },
       fontFamily: {
         manrope: ['Manrope'],

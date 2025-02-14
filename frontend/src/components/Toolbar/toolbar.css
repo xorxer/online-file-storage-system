@@ -1,0 +1,27 @@
+.toolbar {
+  @apply flex w-full flex-col items-start justify-between space-y-2 px-4 py-2 font-manrope font-normal sm:flex-row sm:items-center sm:space-x-4 sm:space-y-0;
+}
+
+.search-container {
+  @apply w-full sm:w-auto sm:max-w-[60%] sm:flex-grow;
+}
+
+.search-input-wrapper {
+  @apply flex w-full items-center rounded border-2 border-grey-400 bg-white focus-within:border-grey-400;
+}
+
+.search-input {
+  @apply w-full bg-transparent py-2 pl-2 pr-4 text-grey-400 placeholder-grey-400 focus:outline-none;
+}
+
+.button-container {
+  @apply flex w-full space-x-2 sm:w-auto;
+}
+
+.action-button {
+  @apply flex flex-grow items-center justify-center whitespace-nowrap rounded border-2 border-grey-400 bg-grey-600 px-2 py-1 text-grey-200 hover:bg-grey-500 sm:flex-grow-0;
+}
+
+.button-icon {
+  @apply mr-1 text-grey-200;
+}

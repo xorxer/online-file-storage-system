@@ -1,0 +1,11 @@
+.logo-container {
+  @apply flex w-full items-center px-2 py-2 sm:px-3 sm:py-3 md:px-4 md:py-4;
+}
+
+.logo-image {
+  @apply mr-2 h-6 w-6 flex-shrink-0 sm:mr-3 sm:h-8 sm:w-8 md:mr-4 md:h-10 md:w-10 lg:h-12 lg:w-12;
+}
+
+.logo-text {
+  @apply min-w-0 flex-grow truncate font-manrope text-base font-bold text-black-100 sm:text-lg md:text-xl lg:text-2xl;
+}

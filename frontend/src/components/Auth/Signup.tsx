@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import InputField from '../InputField';
+import InputField from '../UI/InputField/InputField';
 import { Person, Lock, Email } from '@mui/icons-material';
 import { useAppDispatch } from '../../store/hooks';
 import { signup } from '../../services/authService';
