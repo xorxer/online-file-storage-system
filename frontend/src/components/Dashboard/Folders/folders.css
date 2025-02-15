@@ -1,0 +1,19 @@
+.folders-container {
+  @apply my-4 w-full px-4;
+}
+
+.folders-title {
+  @apply mb-4 text-xl font-bold text-grey-200;
+}
+
+.folders-grid {
+  @apply grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
+}
+
+.folder-item {
+  @apply flex h-16 items-center justify-between rounded border border-grey-400 bg-grey-600 p-4;
+}
+
+.folder-content {
+  @apply flex items-center text-grey-200;
+}

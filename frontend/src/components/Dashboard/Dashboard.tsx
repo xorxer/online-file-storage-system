@@ -3,6 +3,7 @@ import Profile from './Profile/Profile';
 import Logo from '../Logo/Logo';
 import Navbar from './Navbar/Navbar';
 import Toolbar from '../Toolbar/Toolbar';
+import Folders from './Folders/Folders';
 
 const Dashboard: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const Dashboard: React.FC = () => {
       <main className="flex h-full w-full flex-col items-center justify-start bg-white md:w-2/3">
         <Toolbar />
         {/* Your other content here */}
+        <Folders />
       </main>
     </div>
   );
