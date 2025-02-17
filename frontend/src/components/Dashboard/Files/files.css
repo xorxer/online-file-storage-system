@@ -1,0 +1,49 @@
+.files-container {
+  @apply my-4 w-full px-4;
+}
+
+.files-title {
+  @apply mb-4 text-xl font-bold text-grey-200;
+}
+
+.files-header {
+  @apply mb-4 flex items-center rounded-lg bg-grey-600 px-4 py-2 text-grey-400;
+}
+
+.files-header-item {
+  @apply font-bold;
+}
+
+.files-header-item-size,
+.files-header-item-modified {
+  @apply -ml-2;
+}
+
+.file-item {
+  @apply mb-2 flex items-center rounded-lg border-2 border-grey-500 px-4 py-2 hover:bg-grey-600;
+}
+
+.file-content {
+  @apply flex w-1/2 items-center text-black-100 md:w-1/2;
+}
+
+.file-icon {
+  @apply w-6;
+}
+
+.file-name {
+  @apply ml-2 truncate;
+}
+
+.file-size,
+.file-modified {
+  @apply w-1/4 truncate text-black-100 md:w-1/4;
+}
+
+.file-modified {
+  @apply hidden md:block;
+}
+
+.file-more {
+  @apply ml-auto;
+}

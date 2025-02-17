@@ -4,6 +4,7 @@ import Logo from '../Logo/Logo';
 import Navbar from './Navbar/Navbar';
 import Toolbar from '../Toolbar/Toolbar';
 import Folders from './Folders/Folders';
+import Files from './Files/Files';
 
 const Dashboard: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const Dashboard: React.FC = () => {
         <Toolbar />
         {/* Your other content here */}
         <Folders />
+        <Files />
       </main>
     </div>
   );
