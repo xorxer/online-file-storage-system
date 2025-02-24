@@ -9,7 +9,7 @@ export const authController = (authService: AuthService) => {
             const { email, password, name } = req.body;
 
             try {
-                const user = await authService.signup(email, password, name);
+                const user = await authService.signup({email, password, name});
                 res.status(201).json(user);
             } catch (error) {
                 handleError(res, error);
@@ -21,7 +21,7 @@ export const authController = (authService: AuthService) => {
             const { email, password } = req.body;
 
             try {
-                const session = await authService.login(email, password);
+                const session = await authService.login({email, password});
                 res.status(200).json(session);
             } catch (error) {
               handleError(res, error);
